@@ -63,9 +63,10 @@ class StoryRepository: ObservableObject {
                     return
                 }
                 
-                let stories = querySnapshot?.documents.compactMap {document in
-//                    Map every document as a Story using data(as:decoder:). You can do this thanks to FirebaseFirestoreSwift,because Story conforms to Codable.
-                    try? document.data(as: Story.self)
+                let stories: [Story] = querySnapshot?.documents.compactMap { document -> Story? in
+                    var story = try? document.data(as: Story.self)
+                    story?.id = document.documentID
+                    return story
                 } ?? []
                 
                 DispatchQueue.main.async {

@@ -20,7 +20,7 @@
 //SOFTWARE.
 
 import UIKit
-import Firebase
+import FirebaseStorage
 
 let imageCache = NSCache<AnyObject, UIImage>()
 

@@ -20,10 +20,9 @@
 //SOFTWARE.
 
 import Foundation
-import FirebaseFirestoreSwift
 
 struct Story: Identifiable, Codable {
-    @DocumentID var id: String?
+    var id: String?
     var author: String?
     var headline :String?
     var bodyText: String?
@@ -34,5 +33,4 @@ struct Story: Identifiable, Codable {
     var createdAt: Date
     var likeCount: Int
 }
-
 

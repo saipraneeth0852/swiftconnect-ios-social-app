@@ -19,8 +19,7 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 import Foundation
-
-import Firebase
+import FirebaseAuth
 
 class AuthenticationService: ObservableObject {
   @Published var user: User?
@@ -48,4 +47,3 @@ class AuthenticationService: ObservableObject {
       }
   }
 }
-

@@ -20,7 +20,8 @@
 //SOFTWARE.
 
 import SwiftUI
-import Firebase
+import FirebaseAuth
+import FirebaseStorage
 
 func UploadImage(imageData: Data,path: String, completion: @escaping (URL?) -> ()){
    

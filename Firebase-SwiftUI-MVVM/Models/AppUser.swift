@@ -19,10 +19,9 @@
 //SOFTWARE.
 
 import SwiftUI
-import FirebaseFirestoreSwift
 
 struct AppUser: Identifiable, Codable {
-    @DocumentID var id: String?
+    var id: String?
     var username: String?
     var userId: String?
     var email: String?
